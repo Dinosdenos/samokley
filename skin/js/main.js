@@ -128,11 +128,6 @@
     --------------------- */
     $('select').niceSelect();
 
-    /*---------------------
-        venobox
-    --------------------- */
-    $('.venobox').venobox();
-    /*---------------------
 
     /*---------------------
         Cart Dropdown 
@@ -155,8 +150,8 @@
     $('.slider-active-3').owlCarousel({
         items: 1,
         autoplay: true,
-        autoplayTimeout:3000,
-        lazyLoad: true,
+        autoplayTimeout:7000,
+        lazyLoad: false,
         loop: true,
         margin: 10,
         dots: true,
@@ -457,16 +452,5 @@
         $('.open-menu-toggle').slideToggle(500);
     });
 
-
-    $('.owl-carousel').owlCarousel({
-        items: 1,
-        lazyLoad: true,
-        video:true,
-        loop: true,
-        margin: 10,
-        dots: true,
-        nav: true,
-    });
-    
 
 }(jQuery));
