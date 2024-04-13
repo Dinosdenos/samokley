@@ -452,16 +452,6 @@
         $('.open-menu-toggle').slideToggle(500);
     });
 
-
-    $('.owl-carousel').owlCarousel({
-        items: 1,
-        lazyLoad: true,
-        video:true,
-        loop: true,
-        margin: 10,
-        dots: true,
-        nav: true,
-    });
     
 
 }(jQuery));
