@@ -151,6 +151,7 @@
         items: 1,
         autoplay: true,
         autoplayTimeout:7000,
+        lazyLoad: true,
         loop: true,
         margin: 10,
         dots: true,
@@ -220,6 +221,7 @@
     $('.category-slider-2').owlCarousel({
         autoplay: false,
         loop: false,
+        lazyLoad: true,
         smartSpeed: 1000,
         nav: true,
         dots: false,
@@ -453,6 +455,7 @@
 
     $('.owl-carousel').owlCarousel({
         items: 1,
+        lazyLoad: true,
         video:true,
         loop: true,
         margin: 10,
