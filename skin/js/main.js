@@ -1,7 +1,11 @@
 (function($) {
     "use strict";
 
-
+    /*---------------------------
+       Commons Variables
+    ------------------------------ */
+    var $window = $(window),
+        $body = $("body");
 
     /*---------------------------------
     Off Canvas Function
