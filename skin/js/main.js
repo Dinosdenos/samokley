@@ -97,6 +97,55 @@
     }
     mobileOffCanvasMenu2();
 
+               /*---------------------------
+       Best Sell Slider Active
+    ------------------------------ */
+    $('.best-sell-slider').owlCarousel({
+        autoplay: false,
+        loop: false,
+        smartSpeed: 1000,
+        nav: true,
+        dots: false,
+        margin: 30,
+        lazyLoad: true,
+        responsive: {
+            0: {
+                items: 2,
+                autoplay: true,
+                loop: true,
+            },
+            360: {
+                items: 2,
+                autoplay: true,
+                loop: true,
+            },
+            480: {
+                items: 2,
+                autoplay: true,
+                loop: true,
+
+            },
+            768: {
+                items: 3,
+            },
+            992: {
+                items: 4,
+            },
+            1200: {
+                items: 5,
+            }
+        }
+    })
+
+                                        $('.owl-carousel').owlCarousel({
+                                        items: 1,
+                                        lazyLoad: true,
+                                        video: true,
+                                        loop: true,
+                                        margin: 10,
+                                        dots: true,
+                                        nav: true,
+                                    });
 
     /*----------------------------------------
           Bootstrap dropdown               
