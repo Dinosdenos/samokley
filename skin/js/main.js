@@ -144,30 +144,6 @@
         $('.dropdown_search').slideToggle('medium');
     });
 
-    /*---------------------
-        Main Slider Active
-    --------------------- */
-    $('.slider-active-3').owlCarousel({
-        items: 1,
-        autoplay: true,
-        autoplayTimeout:7000,
-        lazyLoad: true,
-        loop: true,
-        margin: 10,
-        dots: true,
-        nav: false,
-        responsive: {
-            0: {
-                items: 1
-            },
-            768: {
-                items: 1
-            },
-            1000: {
-                items: 1
-            }
-        }
-    })
 
   
     /*---------------------------
