@@ -129,7 +129,7 @@
             });*/
     // Option click
     $(document).on('click.nice_select', '.nice-select .option:not(.disabled) a', function(event) {
-        event.preventDefault(); // Отменяем стандартное действие ссылки
+       // event.preventDefault(); // Отменяем стандартное действие ссылки
     
         var $link = $(this);
         var $option = $link.closest('.option');
