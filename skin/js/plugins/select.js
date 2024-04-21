@@ -89,7 +89,7 @@
             /* Event listeners */
     
             // Unbind existing events in case that the plugin has been initialized before
-            $(document).off('.nice_select');
+            //$(document).off('.nice_select');
     
             // Open/close
             $(document).on('click.nice_select', '.nice-select', function(event) {
@@ -115,7 +115,7 @@
             });
     
             // Option click
-            /*$(document).on('click.nice_select', '.nice-select .option:not(.disabled)', function(event) {
+            $(document).on('click.nice_select', '.nice-select .option:not(.disabled)', function(event) {
                 var $option = $(this);
                 var $dropdown = $option.closest('.nice-select');
     
@@ -126,7 +126,7 @@
                 $dropdown.find('.current').text(text);
     
                 $dropdown.prev('select').val($option.data('value')).trigger('change');
-            });*/
+            });
     // Option click
 document.addEventListener('click', function(event) {
     var target = event.target;
