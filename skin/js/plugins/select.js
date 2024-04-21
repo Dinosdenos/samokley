@@ -126,6 +126,7 @@
                 $dropdown.find('.current').text(text);
     
                 $dropdown.prev('select').val($option.data('value')).trigger('change');
+                console.log('+++++++++++++++')
             });
     // Option click
 document.addEventListener('click', function(event) {
@@ -147,6 +148,7 @@ document.addEventListener('click', function(event) {
             
             // Закрываем выпадающий список
             dropdown.classList.remove('open');
+            console.log('+')
         }
     }
 });
