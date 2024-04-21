@@ -114,44 +114,28 @@
                 }
             });
     
-            // Option click
-            $(document).on('click.nice_select', '.nice-select .option:not(.disabled)', function(event) {
-                var $option = $(this);
-                var $dropdown = $option.closest('.nice-select');
-    
-                $dropdown.find('.selected').removeClass('selected');
-                $option.addClass('selected');
-    
-                var text = $option.data('display') || $option.text();
-                $dropdown.find('.current').text(text);
-    
-                $dropdown.prev('select').val($option.data('value')).trigger('change');
-                console.log('+++++++++++++++')
-            });
-    // Option click
-document.addEventListener('click', function(event) {
-    var target = event.target;
-    if (target.classList.contains('nice-select') && !target.classList.contains('disabled')) {
-        var link = target.querySelector('a');
-        if (link) {
-            var option = target.closest('.option');
-            var dropdown = option.closest('.nice-select');
-            
-            dropdown.querySelector('.selected').classList.remove('selected');
-            option.classList.add('selected');
-            
-            var text = link.textContent;
-            dropdown.querySelector('.current').textContent = text;
-            
-            // Выполняем переход по ссылке
-            window.location.href = link.getAttribute('href');
-            
-            // Закрываем выпадающий список
-            dropdown.classList.remove('open');
-            console.log('+')
-        }
-    }
+$(document).on('click', '.nice-select .option:not(.disabled) a', function(event) {
+    event.stopPropagation(); // Предотвращаем всплытие события
+
+    var $link = $(this);
+    var $option = $link.closest('.option');
+    var $dropdown = $option.closest('.nice-select');
+
+    $dropdown.find('.selected').removeClass('selected');
+    $option.addClass('selected');
+
+    var text = $option.data('display') || $option.text();
+    $dropdown.find('.current').text(text);
+
+    $dropdown.prev('select').val($option.data('value')).trigger('change');
+
+    // Выполняем переход по ссылке
+    window.location.href = $link.attr('href');
+
+    // Закрываем выпадающий список
+    $dropdown.removeClass('open');
 });
+
             
     /*$(document).on('click.nice_select', '.nice-select .option:not(.disabled) a', function(event) {
         event.preventDefault(); // Отменяем стандартное действие ссылки
