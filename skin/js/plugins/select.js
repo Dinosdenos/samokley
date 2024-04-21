@@ -128,8 +128,31 @@
                 $dropdown.prev('select').val($option.data('value')).trigger('change');
             });*/
     // Option click
-    $(document).on('click.nice_select', '.nice-select .option:not(.disabled) a', function(event) {
-       // event.preventDefault(); // Отменяем стандартное действие ссылки
+document.addEventListener('click', function(event) {
+    var target = event.target;
+    if (target.classList.contains('nice-select') && !target.classList.contains('disabled')) {
+        var link = target.querySelector('a');
+        if (link) {
+            var option = target.closest('.option');
+            var dropdown = option.closest('.nice-select');
+            
+            dropdown.querySelector('.selected').classList.remove('selected');
+            option.classList.add('selected');
+            
+            var text = link.textContent;
+            dropdown.querySelector('.current').textContent = text;
+            
+            // Выполняем переход по ссылке
+            window.location.href = link.getAttribute('href');
+            
+            // Закрываем выпадающий список
+            dropdown.classList.remove('open');
+        }
+    }
+});
+            
+    /*$(document).on('click.nice_select', '.nice-select .option:not(.disabled) a', function(event) {
+        event.preventDefault(); // Отменяем стандартное действие ссылки
     
         var $link = $(this);
         var $option = $link.closest('.option');
@@ -146,7 +169,7 @@
     
         // Закрываем выпадающий список
         $dropdown.removeClass('open');
-    });
+    });*/
     
     // Close when clicking outside
     $(document).on('click.nice_select', function(event) {
