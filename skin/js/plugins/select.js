@@ -89,7 +89,7 @@
             /* Event listeners */
     
             // Unbind existing events in case that the plugin has been initialized before
-            //$(document).off('.nice_select');
+            $(document).off('.nice_select');
     
             // Open/close
             $(document).on('click.nice_select', '.nice-select', function(event) {
@@ -114,30 +114,21 @@
                 }
             });
     
-$(document).on('click', '.nice-select .option:not(.disabled) a', function(event) {
-    event.stopPropagation(); // Предотвращаем всплытие события
-
-    var $link = $(this);
-    var $option = $link.closest('.option');
-    var $dropdown = $option.closest('.nice-select');
-
-    $dropdown.find('.selected').removeClass('selected');
-    $option.addClass('selected');
-
-    var text = $option.data('display') || $option.text();
-    $dropdown.find('.current').text(text);
-
-    $dropdown.prev('select').val($option.data('value')).trigger('change');
-
-    // Выполняем переход по ссылке
-    window.location.href = $link.attr('href');
-
-    // Закрываем выпадающий список
-    $dropdown.removeClass('open');
-});
-
-            
-    /*$(document).on('click.nice_select', '.nice-select .option:not(.disabled) a', function(event) {
+            // Option click
+            /*$(document).on('click.nice_select', '.nice-select .option:not(.disabled)', function(event) {
+                var $option = $(this);
+                var $dropdown = $option.closest('.nice-select');
+    
+                $dropdown.find('.selected').removeClass('selected');
+                $option.addClass('selected');
+    
+                var text = $option.data('display') || $option.text();
+                $dropdown.find('.current').text(text);
+    
+                $dropdown.prev('select').val($option.data('value')).trigger('change');
+            });*/
+    // Option click
+    $(document).on('click.nice_select', '.nice-select .option:not(.disabled) a', function(event) {
         event.preventDefault(); // Отменяем стандартное действие ссылки
     
         var $link = $(this);
@@ -155,7 +146,7 @@ $(document).on('click', '.nice-select .option:not(.disabled) a', function(event)
     
         // Закрываем выпадающий список
         $dropdown.removeClass('open');
-    });*/
+    });
     
     // Close when clicking outside
     $(document).on('click.nice_select', function(event) {
