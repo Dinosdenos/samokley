@@ -115,7 +115,7 @@
             });
     
             // Option click
-            /*$(document).on('click.nice_select', '.nice-select .option:not(.disabled)', function(event) {
+            $(document).on('click.nice_select', '.nice-select .option:not(.disabled)', function(event) {
                 var $option = $(this);
                 var $dropdown = $option.closest('.nice-select');
     
@@ -126,7 +126,7 @@
                 $dropdown.find('.current').text(text);
     
                 $dropdown.prev('select').val($option.data('value')).trigger('change');
-            });*/
+            });
     // Option click
     $(document).on('click.nice_select', '.nice-select .option:not(.disabled) a', function(event) {
         event.preventDefault(); // Отменяем стандартное действие ссылки
