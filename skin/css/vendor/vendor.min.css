@@ -1376,7 +1376,7 @@ progress {
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:1025) {
     .col-lg {
         flex: 1 0 0%
     }
@@ -4082,7 +4082,7 @@ fieldset:disabled .btn {
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:1025px) {
     .dropdown-menu-lg-start {
         --bs-position: start
     }
@@ -4775,7 +4775,7 @@ fieldset:disabled .btn {
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:1025px) {
     .navbar-expand-lg {
         flex-wrap: nowrap;
         justify-content: flex-start
@@ -5896,7 +5896,7 @@ fieldset:disabled .btn {
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:1025px) {
     .list-group-horizontal-lg {
         flex-direction: row
     }
@@ -6376,7 +6376,7 @@ fieldset:disabled .btn {
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:1025px) {
 
     .modal-lg,
     .modal-xl {
@@ -7441,7 +7441,7 @@ fieldset:disabled .btn {
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:1025px) {
     .sticky-lg-top {
         position: -webkit-sticky;
         position: sticky;
@@ -10157,7 +10157,7 @@ fieldset:disabled .btn {
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:1025px) {
     .float-lg-start {
         float: left !important
     }
